@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <p>jQuery gives me <strong>more<span>power</span></strong>than any other web tool!</p>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+            $('p').andSelf().contents().filter(function() {
+                return this.nodeType == Node.TEXT_NODE;
+            })
+                    .each(function(i, text) {
+                        alert(text.nodeValue);
+                    });
+
+        })(jQuery);
+    </script>
+</body>
+</html>

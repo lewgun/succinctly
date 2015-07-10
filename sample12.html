@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <a>jQuery.com</a>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (
+                function($) {
+                    //Using DOM node properties to set the title attribute.
+                    $('a').get(0).title = 'jQuery.com';
+                    // $('a')[0].title= 'jQuery.com';
+
+                    // Manipulation of DOM element using jQuery methods.
+                    $('a').attr('href', 'http://www.jquery.com');
+
+
+                }
+        )(jQuery);
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input checked="checked" type="checkbox" />
+<input checked="checked" type="radio" />
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+
+                alert($('input:checkbox').is(':checked'));
+                alert($('input:checkbox:checked').length);
+
+            alert($('input:radio').is(':checked'));
+            alert($('input:radio:checked').length);
+
+        })(jQuery);
+    </script>
+</body>
+</html>

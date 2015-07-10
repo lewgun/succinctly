@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <img />
+    <img />
+    <p><img /></p>
+    <img />
+    <p><img /></p>
+
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+            $('img').attr('src', 'http://static.jquery.com/files/rocker/images/logo_jquery_215x53.gif').filter(
+                    function() {
+                        return !$(this).parent('p').length == 1;
+                    }).wrap('<p></p>');
+
+                    })(jQuery);
+    </script>
+</body>
+</html>

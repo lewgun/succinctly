@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div>Out and in fade</div>
+    <div>Out and in fade</div>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+
+            $.fn.outAndInFade = function( opts) {
+                var options = $.extend({},
+                        $.fn.outAndInFade.defaultOpts, opts ||{});
+
+                return this.each(function() {
+                    $(this).fadeOut().fadeIn('normal',
+                    function(){
+                        if ($.isFunction(opts.complete)) {
+                            opts.complete.apply(this);
+                        }
+                    });
+                });
+            }
+
+            $.fn.outAndInFade.defaultOpts = {
+                complete: null // no default function.
+            }
+
+        })(jQuery);
+
+
+        jQuery('div').outAndInFade({
+            complete: function() {
+                     $(this).css('background', '#ff9');
+             }});
+    </script>
+</body>
+</html>

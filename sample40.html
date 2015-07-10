@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<body>
+    <div id="p2">
+        <div id="p1">
+            <div id="p0">
+                <div id="start"> </div>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+
+       /*     alert($('#start').parent().attr('id'));
+            alert($('#start').parents('#p0').attr('id'));
+            alert($('#start').parents()[0].id);
+            alert($('#start').closest('#p0').attr('id'));
+
+            alert($('#start').parent().parent().attr('id'));
+            alert($('#start').parents('#p1').attr('id'));
+            alert($('#start').parents()[1].id);
+            alert($('#start').closest('#p1').attr('id'));
+*/
+            alert($('#start').parent().parent().parent().attr('id'));
+            alert($('#start').parents('#p2').attr('id'));
+            alert($('#start').parents()[2].id);
+            alert($('#start').closest('#p2').attr('id'));
+
+        })(jQuery);
+    </script>
+</body>
+</html>

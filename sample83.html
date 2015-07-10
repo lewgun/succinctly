@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="counter"></div>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+
+            $.fn.count = function() {
+                var $this = $(this);
+                $this.text('0');
+
+                var myInterval = window.setInterval(function() {
+                    var curCount = parseFloat($this.text());
+                    curCount++;
+                    $this.text(curCount + '');
+                }, 1000);
+            };
+
+        })(jQuery);
+
+        jQuery('#counter').count();
+    </script>
+</body>
+</html>

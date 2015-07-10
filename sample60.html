@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<select id="s" name="s">
+    <option value="option1">opt one </option>
+    <option value="option2">opt two </option>
+</select>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+            $('select').val('option2');
+            alert($('select').val() );
+        })(jQuery);
+    </script>
+</body>
+</html>

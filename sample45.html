@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="nav">
+        <div> nav text </div>
+        <div> nav text </div>
+        <div> nav text </div>
+        <div> nav text </div>
+    </div>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+
+            $('#nav div').click(function(){
+                alert($('#nav div').index(this));
+
+                // a nice trick
+                alert($(this).prevAll().length );
+            });
+
+        })(jQuery);
+    </script>
+</body>
+</html>

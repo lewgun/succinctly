@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div><span>stop</span></div>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+            $('div').click(function(evt){
+               alert('you clicked the outter div');
+            });
+
+            $('span').click(function(evt){
+                alert('you clicked a span inside of a div element');
+                evt.stopPropagation();
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>

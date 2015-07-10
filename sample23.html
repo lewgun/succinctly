@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="i0">jQuery</div>
+    <div id="i1">jQuery</div>
+
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+
+                alert($('div').is('#i1'));
+                alert($('div').is('#i2'));
+                alert($('div').is(':hidden'));
+        })(jQuery);
+    </script>
+</body>
+</html>

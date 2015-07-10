@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<ul >
+    <li>text</li>
+    <li>
+        <ul>
+            <li>text</li>
+            <li>text</li>
+        </ul>
+    </li>
+    <li>text</li>
+</ul>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+            alert($('ul:first').find(' > li').length );
+            alert($('> li', 'ul:first').length);
+        })(jQuery);
+    </script>
+</body>
+</html>

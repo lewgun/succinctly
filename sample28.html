@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+            alert($('li:nth-child(2)').text());
+            alert($('li:nth-child(odd)').text());
+            alert($('li:nth-child(even)').text());
+            alert($('li:nth-child(2n)').text());
+        })(jQuery);
+    </script>
+</body>
+</html>

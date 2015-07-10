@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+            $(document).bind('click keypress resize', function(evt) {
+                alert('A click keypress, or resize event occurred on the document.');
+            } );
+        })(jQuery);
+    </script>
+</body>
+</html>

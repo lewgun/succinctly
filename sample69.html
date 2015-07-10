@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<a>click</a>
+
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+            $('a').bind(
+                    'click',
+                    function() {
+                        alert('You clicked me');
+                    }
+
+            );
+
+            $('a').bind('click.unique',function() {
+               alert('You trigger click.unqiue')
+            });
+
+            $('a').trigger('click.unique');
+        })(jQuery);
+
+    </script>
+</body>
+</html>

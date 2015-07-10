@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div>
+        <p><strong><span>text</span></strong></p>
+        <p><strong><span>text</span></strong></p>
+    </div>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+            //2
+            alert($('div').children().length);
+            alert($('>*', 'div').length);
+            alert($('div').find('>*').length);
+
+            //6
+            alert($('div').find('*').length);
+            alert($('*', 'div').length);
+
+        })(jQuery);
+    </script>
+</body>
+</html>

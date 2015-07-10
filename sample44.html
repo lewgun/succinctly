@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+            $('<div><a></a></div>')
+                    .find('a')
+                    .text('jQuery')
+                    .attr('href', 'http://www.jquery.com')
+                    .end()
+                    .appendTo('body');
+        })(jQuery);
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input name="button" type="button" id="button1" />
+<input name="button" type="button" id="button2"  disabled="disabled"/>
+
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+            alert($('#button1').is(':enabled'));
+            alert($('#button1:enabled').length);
+
+            alert($('#button2').is(':enabled'));
+            alert($('#button2:disabled').length);
+
+        })(jQuery);
+    </script>
+</body>
+</html>

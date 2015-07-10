@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+
+            $(window).bind('resize', function(){
+               alert('I have no namespace');
+            });
+
+            $(window).bind('resize.unique', function() {
+               alert('I have a unique namespace');
+            });
+
+            $(window).unbind('resize.unique');
+        })(jQuery);
+    </script>
+</body>
+</html>

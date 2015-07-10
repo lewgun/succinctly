@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        $(
+          function() { // Pass jQuery a funciton
+
+              //Pass jQuery a string of HTML.
+            $('<p></p>').appendTo('body');
+            // Pass jQuery an element reference.
+              $(document.createElement('a')).text('JQuery').appendTo('p');
+
+              //pass jQuery a css expr.
+              $('a:first').attr('href', 'http://www.jQuery.com');
+
+              //Pass jQuery a DOM reference.
+              alert(document.anchors.length);
+
+
+          }
+        );
+    </script>
+</body>
+</html>

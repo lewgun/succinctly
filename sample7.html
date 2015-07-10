@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p></p>
+<script src="jquery-2.1.4.js"></script>
+<script>
+    (function($) {
+
+        var theText = $('p').text('jQuery').text(); //return the string "jQuery"
+        alert(theText);
+
+        //Cannot chain after text(). The chain is broken.
+        //A String si returned, not the jQuery object.
+
+    }(jQuery));
+</script>
+</body>
+</html>

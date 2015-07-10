@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="counter1"></div>
+    <div id="counter2"></div>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+
+            $.fn.count = function(opt) {
+
+                var options = $.extend({},
+                        $.fn.count.defaultOpts,
+                        opt);
+
+               return this.each(
+                        function() {
+                            var $this = $(this);
+                            $this.text(options.startCount + '');
+
+                            var myInterval = window.setInterval(function() {
+                                var curCount = parseFloat($this.text());
+                                curCount++;
+                                $this.text(curCount + '');
+                            }, 1000);
+                        }
+                );
+
+            };
+
+        })(jQuery);
+
+        $.fn.count.defaultOpts = {
+            startCount: 100
+        };
+
+        jQuery('#counter1, #counter2').count({ startCount: 150});
+    </script>
+</body>
+</html>

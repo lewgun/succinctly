@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div style="position: absolute">absolute</div>
+    <span style="position: absolute">absolute</span>
+    <div>static</div>
+
+    <div style="position: absolute">absolute</div>
+    <div>static</div>
+
+    <span style="position: absolute">absolute</span>
+
+
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+
+            //Defin custom filter by extending $.expr[':']
+
+            $.expr[':'].posAbs = function(elem) {
+                return $(elem).css('position') === 'absolute';
+            }
+
+            alert($(':posAbs').length);
+
+            alert($('div:posAbs').length);
+        })(jQuery);
+    </script>
+</body>
+</html>

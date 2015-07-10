@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<a href=""></a>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+       //Standard.
+        jQuery(document).ready(function(){
+            alert('DOM is ready!');
+        } );
+
+        //Short, but same thins as above.
+        jQuery(function(){
+            alert('No really, the DOM is ready!');
+        });
+
+        //Shortcut with fail-safe usage of $, keep in mind that a reference
+        //to the jQuery function is passed into the anonymous function
+        $(function($){
+           alert('Serious ly its ready!');
+            // Use $() without fear of conflicts
+        });
+    </script>
+</body>
+</html>

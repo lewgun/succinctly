@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div>
+        <div>
+            <div id="context"><a href="#">jQuery</a>
+            </div>
+        </div>
+    </div>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+
+            alert($('a').context);
+            alert($('a', $('#context')[0]).context);
+        })(jQuery);
+    </script>
+</body>
+</html>

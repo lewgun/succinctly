@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="radio" value="radio1">
+<input type="radio" value="radio2">
+<input type="checkbox" value="checkbox1">
+<input type="checkbox" value="checkbox2">
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+        //  $('input:radio, input:checkbox').val(['radio1', 'radio2', 'checkbox1', 'checkbox2']);
+            $('input:radio, input:checkbox').val(['radio1', 'radio2', 'checkbox2']);
+
+            //use explicit iteration to clear.
+            //$('input:radio,input:checkbox').removeAttr('checked');
+            //$('input:radio,input:checkbox').attr('checked', '');
+
+        })(jQuery);
+    </script>
+</body>
+</html>

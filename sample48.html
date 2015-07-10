@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p>I love using jQuery!</p>
+<p>I love<strong> really</strong> using jQuery!</strong></p>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+
+                alert($('p:first').contents().get(0).nodeValue)
+                alert($('p:last').contents().get(0).nodeValue);
+                 alert($('p:last').contents().eq(1).text());
+            alert($('p:last').contents().get(2).nodeValue);
+        })(jQuery);
+    </script>
+</body>
+</html>

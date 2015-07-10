@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <span>
+        <a href="javascript:alert('you clicekd me')" class="link"> click me</a>
+    </span>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+            $('span').click(function(){
+
+                window.location = 'http://www.jquery.com';
+            });
+            $('a').click(function(){
+                return false;
+            });
+
+        })(jQuery);
+    </script>
+</body>
+</html>

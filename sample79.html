@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div style="margin:200px;height:100px;width:100px;background: #ccc;padding:20px">relative to this</div>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+
+            $('div').mousemove(
+                    function(evt) {
+                        var rx = evt.pageX - this.offsetLeft;
+                        var ry = evt.pageY - this.offsetTop;
+
+                        $(this).html('rX = ' + rx + ', rY = ' + ry);
+                    }
+            );
+
+        })(jQuery);
+    </script>
+</body>
+</html>

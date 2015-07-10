@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <button>Add another button</button>
+    <a href="#" class="clone"> Add another link</a>
+
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+            $('button').click(function() {
+                var $this = $(this);
+
+                //clone element and its events
+                $this.clone(true).insertAfter(this);
+
+                $this.text('button').unbind('click');
+            });
+
+            $('.clone').click(function(){
+                var $this=$(this);
+
+                //clone elements not event.
+                $this.clone().insertAfter(this);
+                $this.text('link').unbind('click');
+            } );
+
+        })(jQuery);
+    </script>
+</body>
+</html>

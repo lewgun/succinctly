@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>h1</h1>
+<h2>h2</h2>
+<h3>h3</h3>
+
+<script src="jquery-2.1.4.js"></script>
+<script>
+    (function($){
+        //We pass in h3 first, but h1 appears earlier in
+        // the document, so it's first in the wrapper set.
+        alert($('h3,h2,h1')[0].nodeName);
+    })(jQuery);
+</script>
+</body>
+</html>

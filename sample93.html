@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div style="height:100px; width:100px; background-color: red; position: absolute; left:20px">Try to animate me</div>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+
+            jQuery.fx.off = true;
+            $('div').slideUp();
+
+            jQuery.fx.off = false;
+            $('div').slideDown();
+
+        })(jQuery);
+    </script>
+</body>
+</html>

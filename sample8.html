@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<style>
+    .last{
+        background: #900;
+    }
+</style>
+<ul id="list">
+    <li></li>
+    <li>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </li>
+    <li></li>
+    <li></li>
+
+</ul>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        $('#list')  // Original wrapper set.
+                .find(' > li') // Destructive method.
+                     .filter(':last')// Destructive method.
+                          .addClass('last')
+                      .end() //End .filter(':last').
+                     .find('ul') //Destructive method.
+                            .css('background', '#ccc')
+                                 .find('li:last') //Destructive method.
+                                     .addClass('last')
+                                 .end()  // End .find('li:last')
+                     .end() // End .find('ul')
+                .end() // End .find('> li')
+                .find('li') // back to the orrinal $('#list')
+                .append('I am an &lt;li&gt;');
+
+
+    </script>
+</body>
+</html>

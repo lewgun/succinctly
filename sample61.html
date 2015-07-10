@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<select size="4" multiple="multiple">
+    <option value="option1"> opt 1</option>
+    <option value="option2"> opt 2</option>
+    <option value="option3"> opt 3</option>
+    <option value="option4"> opt 4</option>
+</select>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+            $('select').val(['option2', 'option4']);
+            alert($('select').val().join(', '));
+
+        })(jQuery);
+    </script>
+</body>
+</html>

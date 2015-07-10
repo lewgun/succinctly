@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div style="height:100px;width: 100px; background-color: red;"></div>
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        (function($){
+            $('div').fadeTo('slow', 0.50);
+            $('button').click(function(){
+               $('div').fadeOut('slow');
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>
